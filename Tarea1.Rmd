@@ -1,0 +1,29 @@
+---
+title: "Lista de Calificaciones"
+author: "Maria Jose Gonzalez"
+date: "29 de agosto de 2016"
+output: html_document
+---
+
+# Benemerita Universidad Autonoma de Puebla
+### Facultad de Ciencias Fisico Matemáticas
+
+
+## Lista de calificaciones
+
+### Otoño 1015
+  * Programación I                    ---- Cal. 9
+  * Cálculo                           ---- Cal. 10
+  * DHPC                              ---- Cal. 10
+  * Matemáticas básicas               ---- Cal. 9
+  * Problemas de matemáticas básicas  ---- Cal. 9
+  * Introducción a la prof. actuarial ---- Cal. 8
+  
+### Primavera 2016
+  * Programación II      ---- Cal. 8
+  * Cálculo diferencial  ---- Cal. 8
+  * Teoria de ecuaciones ---- Cal. 8
+  * Teoria del interés   ---- Cal. 7
+  * Microeconomia        ---- Cal. 9
+  * Geometría analítica  ---- Cal. 10
+  
