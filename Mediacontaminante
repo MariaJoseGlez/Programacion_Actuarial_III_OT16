@@ -1,0 +1,27 @@
+#Obtiene la media de los datos completos de los contaminantes 
+
+mediacontaminante <- function(directorio, contaminante, id){
+  
+  canid <- length(id)
+  
+  
+   if (contaminante == "Sulfato"){
+     columna <- 2
+   }else if (contaminante == "Nitrato"){
+     columna <- 3
+   }   
+  
+  for (k in 1:canid){
+      id1 <- formatC(id[k],,3,,"0")
+      id2 <- paste(id1, "csv", sep=".")
+      directorio1 <- paste(directorio, id2, sep="/")
+      leer <- read.csv(directorio1)
+      
+        suma <- sum(complete.cases(leer[,columna]))
+        media1 <- mean(leer[, columna], na.rm = T)
+  }
+  
+      media <- sum(media1*suma)/sum(suma)
+      media
+      
+  }
