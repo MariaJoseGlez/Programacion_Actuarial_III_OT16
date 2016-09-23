@@ -1,0 +1,22 @@
+#Cuenta los casos completos
+completos <- function(directorio, id){
+  id<- c(234,235)
+  cantid <- length(id)
+  suma <- vector("numeric", cantid)
+  
+  for (k in 1:cantid){
+    id1 <- formatC(id[k],,3,,"0")
+    id2 <- paste(id1, "csv", sep=".")
+    directorio1 <- paste(directorio, id2, sep="/")
+    m <- read.csv(directorio1)
+  
+   suma[k] <- sum(complete.cases(m))
+  }
+  
+   data.frame(id,suma)
+  
+}
+  
+d<- completos("C:/Users/AUXILIAR/Documents/Programación III/specdata", id)
+d
+
