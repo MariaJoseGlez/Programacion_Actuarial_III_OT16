@@ -1,0 +1,34 @@
+#Obtener la correlación entre Nitrato y Sulfato
+
+corr <- function(directorio, horizonte){
+  #horizonte <- 100
+
+  fc <- list.files(directorio)
+  cantfil <- length(fc)
+  contador <- 0
+  id <- vector("numeric")
+  resultado<- vector("numeric")
+  
+  for (k in 1:cantfil){
+    directorio1 <- paste(directorio,fc[k], sep="/")
+    leer <- read.csv(directorio1)
+    suma <- sum(complete.cases(leer))
+      if (suma > horizonte){
+        contador <- contador + 1
+        id[contador]<- fc[k]
+      }
+  }
+  
+  tamaño <- length(id)
+    
+    for (j in 1:tamaño){
+      directorio2 <- paste(directorio, id[j], sep="/")
+      leer2 <- read.csv(directorio2)
+      
+      s <- leer2[,2]
+      n <- leer2[,3]
+      resultado[j] <- cor(s,n, use= "complete.obs")
+      
+    }
+  resultado
+}
